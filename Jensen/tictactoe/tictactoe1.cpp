@@ -19,7 +19,6 @@ int main()
 
         displayBoard(board);
 
-        // Player input
         int move;
         bool validMove = false;
         while (!validMove)
@@ -29,7 +28,7 @@ int main()
 
             if (move >= 1 && move <= 9 && board[move - 1] == ' ')
             {
-                board[move - 1] = currentPlayer; // Place the player's mark
+                board[move - 1] = currentPlayer;
                 validMove = true;
             }
             else
@@ -38,7 +37,6 @@ int main()
             }
         }
 
-        // Check for win or draw
         if (checkWin(board, currentPlayer))
         {
             displayBoard(board);
@@ -53,7 +51,7 @@ int main()
         }
         else
         {
-            // Switch turn
+
             currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
         }
     }
@@ -62,7 +60,6 @@ int main()
     return 0;
 }
 
-// Function to display the game board
 void displayBoard(const vector<char> &board)
 {
     system("clear");
