@@ -130,7 +130,6 @@ public:
                 }
                 else
                 {
-                    // Switch turn
                     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
                 }
             }
